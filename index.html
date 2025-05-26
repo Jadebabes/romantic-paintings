@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchanted Art Gallery | Love Through Ages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rose-gold: #b76e79;
+            --antique-white: #faebd7;
+            --deep-burgundy: #800020;
+            --gold-leaf: #d4af37;
+            --velvet-black: #0a0809;
+        }
+
+        body {
+            font-family: 'Cinzel Decorative', cursive;
+            background: radial-gradient(circle at center, var(--antique-white), #fff5ee);
+            color: var(--velvet-black);
+            overflow-x: hidden;
+        }
+
+        .parallax-header {
+            height: 100vh;
+            background: 
+                linear-gradient(45deg, rgba(183,110,121,0.3), rgba(183,110,121,0.1)),
+                url('d34e5a27f81626492497aa8807ba8e11.jpg') fixed center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            text-align: center;
+            animation: titleFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes titleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            padding: 5rem;
+            perspective: 2000px;
+        }
+
+        .art-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            position: relative;
+        }
+
+        .art-card:hover {
+            transform: rotateX(5deg) rotateY(5deg) translateZ(30px);
+        }
+
+        .art-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--gold-leaf);
+            filter: sepia(0.2) contrast(1.1);
+            transition: filter 0.3s;
+        }
+
+        .art-card:hover .art-image {
+            filter: sepia(0) contrast(1.2);
+        }
+
+        .card-caption {
+            padding: 2rem;
+            background: linear-gradient(to bottom right, white, var(--antique-white));
+            position: relative;
+        }
+
+        .card-caption::after {
+            content: '♥';
+            position: absolute;
+            top: -25px;
+            right: 20px;
+            font-size: 2rem;
+            color: var(--rose-gold);
+        }
+
+        .history-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 245, 238, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(0,0,0,0.3);
+            max-width: 700px;
+            display: none;
+            border: 2px solid var(--gold-leaf);
+        }
+
+        .history-modal:target {
+            display: block;
+            animation: modalEntrance 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .quiz-section {
+            background: var(--deep-burgundy);
+            padding: 5rem;
+            color: white;
+            margin: 8rem 0;
+            text-align: center;
+        }
+
+        .quiz-box {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            border: 2px solid var(--gold-leaf);
+            border-radius: 15px;
+        }
+
+        .quiz-question {
+            margin: 2rem 0;
+            padding: 1rem;
+            border-bottom: 1px solid var(--rose-gold);
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"] + label {
+            display: block;
+            padding: 1rem;
+            margin: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        input[type="radio"]:checked + label {
+            background: var(--rose-gold);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                padding: 2rem;
+                grid-template-columns: 1fr;
+            }
+            
+            .art-image {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="parallax-header">
+        <div class="header-content">
+            <h1 style="font-family: 'Dancing Script', cursive; font-size: 5rem; color: var(--gold-leaf);">
+                Eternal Brushstrokes
+            </h1>
+            <p style="font-size: 1.5rem; letter-spacing: 0.2em; color: white;">Masterpieces of Passion Through Time</p>
+        </div>
+    </header>
+
+    <div class="gallery">
+        <!-- The Kiss by Gustav Klimt -->
+        <div class="art-card">
+            <img src="p034sbrg.jpg" 
+                 alt="The Kiss" class="art-image">
+            <div class="card-caption">
+                <h3>The Golden Embrace</h3>
+                <p>Gustav Klimt, 1908</p>
+                <a href="#kiss-history" style="color: var(--deep-burgundy);">View History →</a>
+            </div>
+        </div>
+
+        <!-- Dance in the City by Renoir -->
+        <div class="art-card">
+            <img src="Pierre-Auguste_Renoir_019.jpg" 
+                 alt="Dance" class="art-image">
+            <div class="card-caption">
+                <h3>Urban Waltz</h3>
+                <p>Pierre-Auguste Renoir, 1883</p>
+                <a href="#dance-history" style="color: var(--deep-burgundy);">View History →</a>
+            </div>
+        </div>
+
+        <!-- Psyche Revived by Canova -->
+        <div class="art-card">
+            <img src="lp3vs3ur9h7z.webp" 
+                 alt="Psyche" class="art-image">
+            <div class="card-caption">
+                <h3>Divine Awakening</h3>
+                <p>Antonio Canova, 1787</p>
+                <a href="#psyche-history" style="color: var(--deep-burgundy);">View History →</a>
+            </div>
+        </div>
+
+        <!-- Spring by Alma-Tadema -->
+        <div class="art-card">
+            <img src="download.png" 
+                 alt="Spring" class="art-image">
+            <div class="card-caption">
+                <h3>Blossoming Romance</h3>
+                <p>Lawrence Alma-Tadema, 1894</p>
+                <a href="#spring-history" style="color: var(--deep-burgundy);">View History →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- History Modals -->
+    <div id="kiss-history" class="history-modal">
+        <a href="#" class="close-btn" style="position: absolute; right: 20px; top: 20px; font-size: 2em; color: var(--rose-gold);">×</a>
+        <h2>The Golden Embrace</h2>
+        <p>Gustav Klimt's 1908 masterpiece combines gold leaf and oil painting to create this iconic symbol of romantic love...</p>
+    </div>
+
+    <div id="dance-history" class="history-modal">
+        <a href="#" class="close-btn" style="position: absolute; right: 20px; top: 20px; font-size: 2em; color: var(--rose-gold);">×</a>
+        <h2>Urban Waltz</h2>
+        <p>Renoir's 1883 work captures the elegance of Parisian society through his signature Impressionist style...</p>
+    </div>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="quiz-box">
+            <h2>Romantic Art Quiz</h2>
+            
+            <div class="quiz-question">
+                <p>1. Which painting uses gold leaf extensively?</p>
+                <input type="radio" name="q1" id="q1a">
+                <label for="q1a">The Kiss</label>
+                
+                <input type="radio" name="q1" id="q1b">
+                <label for="q1b">Dance in the City</label>
+            </div>
+
+            <div class="quiz-question">
+                <p>2. Which artwork is a sculpture?</p>
+                <input type="radio" name="q2" id="q2a">
+                <label for="q2a">Psyche Revived</label>
+                
+                <input type="radio" name="q2" id="q2b">
+                <label for="q2b">Spring</label>
+            </div>
+
+            <div class="quiz-question">
+                <p>3. Which artist was an Impressionist?</p>
+                <input type="radio" name="q3" id="q3a">
+                <label for="q3a">Renoir</label>
+                
+                <input type="radio" name="q3" id="q3b">
+                <label for="q3b">Klimt</label>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
