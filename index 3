@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verzauberte Kunstgalerie | Liebe durch die Zeitalter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <!-- CSS bleibt unverändert -->
+</head>
+<body>
+    <!-- Header bleibt gleich -->
+
+    <div class="gallery">
+        <!-- The Kiss by Gustav Klimt -->
+        <div class="art-card">
+            <div class="card-caption">
+                <a href="#kiss-history" style="color: var(--deep-burgundy);">Geschichte anzeigen →</a>
+            </div>
+        </div>
+
+        <!-- Weitere Gemälde-Karten... -->
+    </div>
+
+    <!-- Historien-Modale auf Deutsch -->
+    <div id="kiss-history" class="history-modal">
+        <h2>Der Goldene Kuss</h2>
+        <p>Gustav Klimts Meisterwerk von 1908 vereint Blattgold und Ölmalerei zu diesem ikonischen Symbol romantischer Liebe. Das Werk entstand während seiner "Goldenen Periode" und zeigt Einflüsse des Wiener Jugendstils.</p>
+    </div>
+
+    <div id="dance-history" class="history-modal">
+        <h2>Städtischer Walzer</h2>
+        <p>Renoirs impressionistisches Werk von 1883 zeigt die Eleganz des Pariser Gesellschaftslebens. Das Paar im Mittelpunkt verkörpert die unbeschwerte Lebensfreude der Belle Époque.</p>
+    </div>
+
+    <div id="psyche-history" class="history-modal">
+        <h2>Göttliches Erwachen</h2>
+        <p>Antonio Canovas Marmorskulptur (1787) zeigt den Moment, in dem Amor Psyche mit einem Kuss wiederbelebt. Ein Schlüsselwerk des klassizistischen Stils.</p>
+    </div>
+
+    <div id="venus-history" class="history-modal">
+        <h2>Geburt der Venus</h2>
+        <p>Sandro Botticellis Renaissance-Meisterwerk (1486) zeigt die Göttin Venus, die aus Meerschaum geboren wird. Das Gemälde gilt als Inbegriff idealisierter Schönheit.</p>
+    </div>
+
+    <div id="hayez-history" class="history-modal">
+        <h2>Der verbotene Kuss</h2>
+        <p>Francesco Hayez' Werk von 1859 symbolisiert die italienische Einheitsbewegung. Das mittelalterliche Kostüm verhüllt politische Botschaften des Risorgimento.</p>
+    </div>
+
+    <!-- Quiz-Sektion bleibt auf Englisch -->
+    <section class="quiz-section">
+        <div class="quiz-box">
+            <h2>Kunstquiz zur Romantik</h2>
+            <div class="quiz-question">
+                <p>1. Welches Kunstwerk verwendet Blattgold?</p>
+                <input type="radio" name="q1" id="q1a">
+                <label for="q1a">Der Kuss (Klimt)</label>
+            </div>
+            <!-- Weitere Quizfragen... -->
+        </div>
+    </section>
+</body>
+</html>
