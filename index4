@@ -1,0 +1,17 @@
+<!-- Romeo und Julia -->
+<div id="dicksee-history" class="history-modal">
+    <h2>Die tragischen Liebenden</h2>
+    <p>Frank Dicksees Werk von 1884 illustriert Shakespeares berühmtestes Liebespaar. Die präraffaelitische Darstellung betont die emotionale Intensität der Szene.</p>
+</div>
+
+<!-- Die Seele der Rose -->
+<div id="rose-history" class="history-modal">
+    <h2>Blumengeflüster</h2>
+    <p>John William Waterhouses präraffaelitisches Werk (1908) zeigt eine Frau, die tief den Duft einer Rose einatmet. Das Gemälde symbolisiert vergängliche Schönheit.</p>
+</div>
+
+<!-- Frühling -->
+<div id="spring-history" class="history-modal">
+    <h2>Blühende Romanze</h2>
+    <p>Lawrence Alma-Tademas neoklassizistisches Werk (1894) zeigt römische Frühlingsrituale. Die detailreichen Architekturdarstellungen sind typisch für den Künstler.</p>
+</div>
